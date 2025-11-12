@@ -56,7 +56,6 @@ print(miceResultBI)
 data(mcData)
 
 ciResultsMC <- miceCI(rep=1000,
-                      frac=.7,
                       mcData$ref,
                       mcData$pred,
                       lowPercentile=0.025,
@@ -75,7 +74,6 @@ print(ciResultsMC)
 data(biData)
 
 ciResultsBi <- miceCI(rep=1000,
-                      frac=.7,
                       biData$ref,
                       biData$pred,
                       lowPercentile=0.025,
@@ -94,8 +92,7 @@ set.seed(42)
 compareResult <- miceCompare(ref=compareData$ref,
                              result1=compareData$rfPred,
                              result2=compareData$dtPred,
-                             reps=1000,
-                             frac=.7)
+                             reps=1000)
 
 print(compareResult)
 
